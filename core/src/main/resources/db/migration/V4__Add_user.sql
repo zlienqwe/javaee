@@ -1,0 +1,1 @@
+insert into users (NAME, AGE, MAIL, SEX) values ('赵乐乐', 22, 'zhaoleledeyouxiang@gmail.com', '女');
