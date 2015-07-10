@@ -18,7 +18,6 @@ public class UpdateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String name = req.getParameter("name");
         String sex = req.getParameter("sex");
-        System.out.println("sex="+sex);
         int age = new Integer(req.getParameter("age"));
         String mail = req.getParameter("mail");
         int id = new Integer(req.getParameter("id"));

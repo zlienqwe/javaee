@@ -21,7 +21,6 @@ public class AddServlet extends HttpServlet {
 
         String name = req.getParameter("name");
         String sex = req.getParameter("sex");
-        System.out.println(req.getParameter("age"));
         int age = new Integer(req.getParameter("age"));
         String mail = req.getParameter("mail");
 

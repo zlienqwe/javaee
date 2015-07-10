@@ -119,9 +119,7 @@ public class UserDao {
     public int updateUser(User user) {
         GetConnection getConnection = new GetConnection();
         Connection con = getConnection.getConnection();
-        System.out.println("--------");
         String updateSql = "update users set name='"+user.getUserName()+"',sex='"+user.getUserSex()+"',mail='"+user.getUserMail()+"',age="+user.getUserAge()+" where id="+user.getUserId();
-            System.out.println(updateSql);
         try {
             Statement stmt = con.createStatement();
             int result  = stmt.executeUpdate(updateSql);
