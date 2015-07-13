@@ -18,7 +18,6 @@ import java.util.List;
 @WebServlet(name = "AddServlet")
 public class AddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
         String name = req.getParameter("name");
         String sex = req.getParameter("sex");
         int age = new Integer(req.getParameter("age"));
@@ -27,7 +26,8 @@ public class AddServlet extends HttpServlet {
 
 
         UserDao userDao = new UserDao();
-        userDao.addUser(name, sex, mail, age);
+        User user = new User(0, name, sex, mail, age);
+        userDao.addUser(user);
         res.sendRedirect("/web/show");
 
     }

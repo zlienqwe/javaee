@@ -2,6 +2,7 @@ package com.tw.web;
 
 import com.tw.core.Service;
 import com.tw.dao.UserDao;
+import com.tw.entity.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +24,9 @@ public class DeleteServlet extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("id"));
 
         UserDao userDao = new UserDao();
-        userDao.deleteUser(id);
+        User user = userDao.getUserById(id);
+
+        userDao.deleteUser(user);
         res.sendRedirect("/web/show");
 
     }
