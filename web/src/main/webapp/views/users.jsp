@@ -7,7 +7,7 @@
 <body>
 <h1>用户信息列表</h1>
 
-<form id="iform"  method="post" action="/web/add">
+<form id="iform"  method="post" action="/web/users">
   Name:<br/>
   <input type="text"  name="name" /><br/>
   Age:<br/>
@@ -37,8 +37,8 @@
     <td>${user.userSex}</td>
     <td>${user.userMail}</td>
     <td>${user.userAge}</td>
-    <td><a href="/web/delete?id=${user.userId}">删除</a></td>
-    <td><a href="/web/update?id=${user.userId}">修改</a></td>
+    <td><a href="/web/users/delete/${user.userId}">删除</a></td>
+    <td><a href="/web/users/update/${user.userId}">修改</a></td>
   </tr>
 </c:forEach>
   </tbody>

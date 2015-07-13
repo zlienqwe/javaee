@@ -4,47 +4,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http:/java.sun.com/dtd/web-app_2_3.dtd">
 
-
-
-    <!--<servlet>-->
-        <!--<servlet-name>ShowServlet</servlet-name>-->
-        <!--<servlet-class>com.tw.web.ShowServlet</servlet-class>-->
-    <!--</servlet>-->
-
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>ShowServlet</servlet-name>-->
-        <!--<url-pattern>/</url-pattern>-->
-    <!--</servlet-mapping>-->
-
-    <!--<servlet>-->
-        <!--<servlet-name>AddServlet</servlet-name>-->
-        <!--<servlet-class>com.tw.web.AddServlet</servlet-class>-->
-    <!--</servlet>-->
-
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>AddServlet</servlet-name>-->
-        <!--<url-pattern>/add</url-pattern>-->
-    <!--</servlet-mapping>-->
-
-    <!--<servlet>-->
-        <!--<servlet-name>DeleteServlet</servlet-name>-->
-        <!--<servlet-class>com.tw.web.DeleteServlet</servlet-class>-->
-    <!--</servlet>-->
-
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>DeleteServlet</servlet-name>-->
-        <!--<url-pattern>/deleteUser</url-pattern>-->
-    <!--</servlet-mapping>-->
-
-    <!--<servlet>-->
-        <!--<servlet-name>UpdateServlet</servlet-name>-->
-        <!--<servlet-class>com.tw.web.UpdateServlet</servlet-class>-->
-    <!--</servlet>-->
-
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>UpdateServlet</servlet-name>-->
-        <!--<url-pattern>/updateUser</url-pattern>-->
-    <!--</servlet-mapping>-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/spring-javaee-servlet.xml</param-value>
