@@ -15,7 +15,7 @@
 <body>
 
 
-<form  method="post" action="/web/updateUser">
+<form  method="post" action="/web/update">
   <input type="hidden" name="id" value="${user.userId}"/>
   Name:<br/>
   <input type="text"  name="name" value="${user.userName}"/><br/>

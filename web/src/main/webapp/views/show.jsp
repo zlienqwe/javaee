@@ -31,14 +31,14 @@
   </thead>
 
   <tbody>
-<c:forEach items="${userList}" var="user">
+<c:forEach items="${user}" var="user">
   <tr>
     <td>${user.userName}</td>
     <td>${user.userSex}</td>
     <td>${user.userMail}</td>
     <td>${user.userAge}</td>
-    <td><a href="/web/deleteUser?id=${user.userId}">删除</a></td>
-    <td><a href="/web/updateUser?id=${user.userId}">修改</a></td>
+    <td><a href="/web/delete?id=${user.userId}">删除</a></td>
+    <td><a href="/web/update?id=${user.userId}">修改</a></td>
   </tr>
 </c:forEach>
   </tbody>
