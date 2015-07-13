@@ -33,7 +33,7 @@ public class UpdateServlet extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("id"));
 
         UserDao userDao = new UserDao();
-        User user = userDao.getUser(id);
+        User user = userDao.getUserById(id);
         req.setAttribute("user",user);
         req.getRequestDispatcher("update.jsp").forward(req, res);
     }

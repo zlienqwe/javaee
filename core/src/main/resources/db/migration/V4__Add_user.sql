@@ -1,1 +1,1 @@
-insert into users (NAME, AGE, MAIL, SEX) values ('赵乐乐', 22, 'zhaoleledeyouxiang@gmail.com', '女');
+insert into users (NAME, SEX, MAIL, AGE) values ('朱江', '男','hujaingdeyouxiang@gmail.com', 22);
