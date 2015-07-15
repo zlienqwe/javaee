@@ -5,6 +5,8 @@
     <title>user information</title>
 </head>
 <body>
+<a type="button" href="./host/logout">退出登录</a>
+
 <h1>用户信息列表</h1>
 
 <form id="iform"  method="post" action="/web/users">
@@ -31,7 +33,7 @@
   </thead>
 
   <tbody>
-<c:forEach items="${user}" var="user">
+<c:forEach items="${users}" var="user">
   <tr>
     <td>${user.userName}</td>
     <td>${user.userSex}</td>

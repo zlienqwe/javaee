@@ -21,16 +21,24 @@ public class User{
     private String UserMail;
     @Column(name = "Age")
     private int UserAge;
+    @Column(name = "Password")
+    private String UserPassword;
+
 
     public User(){
 
     }
-    public User(int userId, String userName, String userSex, String userMail, int userAge) {
+    public User(int userId, String userName, String userSex, String userMail, int userAge, String userPassword) {
         UserId = userId;
         UserName = userName;
         UserSex = userSex;
         UserMail = userMail;
         UserAge = userAge;
+        UserPassword = userPassword;
+    }
+
+    public String getPassword(){
+        return UserPassword;
     }
 
     public int getUserId() {
@@ -57,6 +65,21 @@ public class User{
         return UserAge;
     }
 
+    public String getUserPassword() {
+        return UserPassword;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "UserId=" + UserId +
+                ", UserName='" + UserName + '\'' +
+                ", UserSex='" + UserSex + '\'' +
+                ", UserMail='" + UserMail + '\'' +
+                ", UserAge=" + UserAge +
+                ", UserPassword='" + UserPassword + '\'' +
+                '}';
+    }
 }
 
 
