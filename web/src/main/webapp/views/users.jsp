@@ -5,7 +5,7 @@
     <title>user information</title>
 </head>
 <body>
-<a type="button" href="./host/logout">退出登录</a>
+<a type="button" href="/web/host/logout">退出登录</a>
 
 <h1>用户信息列表</h1>
 

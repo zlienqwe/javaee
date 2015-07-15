@@ -57,7 +57,6 @@ public class LoginController {
                 response.addCookie(cookie);
 
                 String url = this.getLastUrl(lastUrl);
-                System.out.println(url);
 
                 return new ModelAndView("redirect:/" + url);
             } else {

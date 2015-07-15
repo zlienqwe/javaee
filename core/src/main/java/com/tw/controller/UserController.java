@@ -49,6 +49,10 @@ public class UserController {
                                     @CookieValue(value = "login_user", defaultValue = "") String currentUser,
                                     HttpServletResponse response) {
         if (!currentUser.equals("")) {
+            Cookie userCookie = new Cookie("last_page", null);
+            userCookie.setMaxAge(0);
+            userCookie.setPath("/");
+            response.addCookie(userCookie);
 
             return createModelAndView("users", "users", userService.getAllUsers());
         } else {
