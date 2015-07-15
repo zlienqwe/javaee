@@ -70,8 +70,9 @@ public class UserController {
     public ModelAndView addUser(@RequestParam String name,
                                 @RequestParam String sex,
                                 @RequestParam String mail,
-                                @RequestParam int age) {
-        User user = new User(0, name, sex, mail, age, "123456");
+                                @RequestParam int age,
+                                @RequestParam String password) {
+        User user = new User(0, name, sex, mail, age, MD5Util.md5(password));
         userService.addUser(user);
 
         return new ModelAndView("redirect:/users");
@@ -102,9 +103,10 @@ public class UserController {
                                    @RequestParam String name,
                                    @RequestParam String sex,
                                    @RequestParam String mail,
-                                   @RequestParam int age
-                                   )throws NoSuchAlgorithmException {
-        User user = new User(id, name, sex, mail, age, "123456");
+                                   @RequestParam int age,
+                                   @RequestParam String password
+                                   ) {
+        User user = new User(id, name, sex, mail, age,password);
         userService.updateUser(user);
 
         return new ModelAndView("redirect:/users");

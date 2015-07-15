@@ -34,6 +34,8 @@
   Mail:<br/>
   <input type="text" name="mail" value="${user.userMail}"/><br/>
   <input type="submit" value="修改"/>
+  <br/>
+  <input type="hidden" name="password" value="${user.userPassword}"/><br/>
 </form>
 
 </body>

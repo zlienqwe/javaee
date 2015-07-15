@@ -20,7 +20,12 @@
   <br/>
   Mail:<br/>
   <input type="text" name="mail" /><br/>
+  Password:<br/>
+  <input type="password" name="password" /><br/>
   <input type="submit" value="增加"/>
+
+
+
 </form>
 <table border="1">
   <thead>

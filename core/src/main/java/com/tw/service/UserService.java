@@ -39,10 +39,9 @@ public class UserService {
 
     public String canLogIn(User user, String password) {
 
-        if (MD5Util.md5(user.getPassword()).equals(password)) {
+        if (user.getPassword().equals(password)) {
             return "密码正确";
         } else {
-
             return "密码错误";
         }
     }
