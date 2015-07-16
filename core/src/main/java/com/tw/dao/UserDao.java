@@ -63,9 +63,4 @@ public class UserDao {
         session.close();
     }
 
-    public static void main(String[] args) {
-        User user = new User(0, "lily", "女", "e", 21, MD5Util.md5("111"));
-
-        new UserDao().addUser(user);
-    }
 }

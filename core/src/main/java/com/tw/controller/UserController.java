@@ -88,14 +88,24 @@ public class UserController {
     }
 
     @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
-    public ModelAndView getUpdateUser(@PathVariable int id){
-        User user = userService.getUserById(id);
+    public ModelAndView getUpdateUser(@CookieValue(value = "login_user", defaultValue = "") String currentUser,
+                                      HttpServletResponse response,@PathVariable int id){
 
-        ModelAndView modelAndView = new ModelAndView();
 
-        modelAndView.setViewName("updateUser");
-        modelAndView.addObject("user", user);
-        return modelAndView;
+        if (!currentUser.equals("")) {
+            Cookie userCookie = new Cookie("last_page", null);
+            userCookie.setMaxAge(0);
+            userCookie.setPath("/");
+            response.addCookie(userCookie);
+            User user = userService.getUserById(id);
+
+            return createModelAndView("updateUser", "user", user);
+        } else {
+            response.addCookie(deleteLastPageCookie());
+            response.addCookie(createLastPageCookie("users/update/" + id));
+
+            return new ModelAndView("redirect:/host/login");
+        }
     }
 
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
@@ -106,7 +116,7 @@ public class UserController {
                                    @RequestParam int age,
                                    @RequestParam String password
                                    ) {
-        User user = new User(id, name, sex, mail, age,password);
+        User user = new User(id, name, sex, mail, age, password);
         userService.updateUser(user);
 
         return new ModelAndView("redirect:/users");
